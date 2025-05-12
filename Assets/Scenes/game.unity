@@ -299,7 +299,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Destroy 10 spheres
+  m_Text: Destroy 10 cubes
 --- !u!222 &241874517
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ public class HUDControl : MonoBehaviour
     private float totalTime = 120f;
     private float remainingTime;
     private int totalDestroyed;
-    private int spheresDestroyed;
+    private int cubesDestroyed;
     public RandomPosition randomPosition;
 
     void Start()
@@ -27,11 +27,11 @@ public class HUDControl : MonoBehaviour
     void Update()
     {
         totalDestroyed = randomPosition.cubeNums + randomPosition.sphereNums - randomPosition.spheres.Count - randomPosition.cubes.Count;
-        spheresDestroyed = randomPosition.sphereNums - randomPosition.spheres.Count;
+        cubesDestroyed = randomPosition.cubeNums - randomPosition.cubes.Count;
         progressText3.text = $"Total destroyed: {totalDestroyed}/10";
-        progressText5.text = $"Spheres destroyed: {spheresDestroyed}/10";
-        if(spheresDestroyed >= 10)
-            progressText5.text = "10 spheres destroyed!";
+        progressText5.text = $"Cubes destroyed: {cubesDestroyed}/10";
+        if(cubesDestroyed >= 10)
+            progressText5.text = "10 cubes destroyed!";
         if (totalDestroyed >= 10)
             progressText3.text = "Job well done!";
         if (remainingTime > 0)
